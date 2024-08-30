@@ -14,6 +14,10 @@ body {
   outline: none;
   color: rgb(4, 4, 92);
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 .input1 {
   width: 200px;
   height: 25px;
@@ -301,4 +305,8 @@ CSS */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+.single_main {
+  width: 100px;
+  background-color: #af4848;
 }

@@ -10,6 +10,9 @@ const Nav = () => {
       <div className="navlink">
         <NavLink to="/new_resume">New Resume</NavLink>
       </div>
+      <div className="navlink">
+        <NavLink to="/Single_new_resume">View Resume</NavLink>
+      </div>
     </div>
   );
 };

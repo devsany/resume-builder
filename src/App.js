@@ -5,6 +5,7 @@ import Newresume from "./component/maincomponent/new_resume/Newresume";
 import Home from "./component/maincomponent/Home/Home";
 import Nav from "./component/smallcomponent/Navbar";
 import { useState } from "react";
+import ViewSingleResume from "./component/maincomponent/ViewSingleResume/ViewSingleResume";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/new_resume" element={<Newresume />} />
+            <Route path="/Single_new_resume" element={<ViewSingleResume />} />
           </Routes>
         </div>
       </div>

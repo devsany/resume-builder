@@ -71,6 +71,33 @@ const validate = (values) => {
   if (!values.socialMedia4) {
     error.socialMedia4 = "require";
   }
+  if (!values.projectName1) {
+    error.projectName1 = "require";
+  }
+  if (!values.projectName2) {
+    error.projectName2 = "require";
+  }
+  if (!values.projectName3) {
+    error.projectName3 = "require";
+  }
+  if (!values.projectDescription1) {
+    error.projectDescription1 = "require";
+  }
+  if (!values.projectDescription2) {
+    error.projectDescription2 = "require";
+  }
+  if (!values.projectDescription3) {
+    error.projectDescription3 = "require";
+  }
+  if (!values.techStack1) {
+    error.techStack1 = "require";
+  }
+  if (!values.techStack2) {
+    error.techStack2 = "require";
+  }
+  if (!values.techStack3) {
+    error.techStack3 = "require";
+  }
   return error;
 };
 const NewResumeForm = () => {
@@ -113,7 +140,6 @@ const NewResumeForm = () => {
                       <ErrorMessage name="email" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="applyFor">Apply For</label>
                     <FastField
@@ -140,7 +166,6 @@ const NewResumeForm = () => {
                       <ErrorMessage name="primaryNumber" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="secondaryNumber">
                       Phone Number(secondary)
@@ -169,7 +194,6 @@ const NewResumeForm = () => {
                       <ErrorMessage name="socialMedia" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="socialMedia1">Enter Linkedin Link</label>
                     <FastField
@@ -183,7 +207,6 @@ const NewResumeForm = () => {
                       <ErrorMessage name="socialMedia1" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="socialMedia3">Enter github Link</label>
                     <FastField
@@ -197,7 +220,6 @@ const NewResumeForm = () => {
                       <ErrorMessage name="socialMedia3" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="socialMedia4">Enter instagram Link</label>
                     <FastField
@@ -257,9 +279,7 @@ const NewResumeForm = () => {
                       <ErrorMessage name="techStack1" />
                     </div>
                   </div>
-
                   {/* second project  */}
-
                   <div className="inputField">
                     <label htmlFor="projectName2">
                       Enter your project Name
@@ -268,14 +288,13 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="projectName2"
-                      placeholder="Enter your First Project Name"
+                      placeholder="Enter your Second Project Name"
                       name="projectName2"
                     />
                     <div className="error">
                       <ErrorMessage name="projectName2" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="projectDescription2">
                       Enter your 2st project Description
@@ -307,9 +326,7 @@ const NewResumeForm = () => {
                     </div>
                   </div>
                   {/* second project end */}
-
                   {/* third project start */}
-
                   <div className="inputField">
                     <label htmlFor="projectName3">
                       Enter your project Name
@@ -318,14 +335,13 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="projectName3"
-                      placeholder="Enter your First Project Name"
+                      placeholder="Enter your Third Project Name"
                       name="projectName3"
                     />
                     <div className="error">
                       <ErrorMessage name="projectName3" />
                     </div>
                   </div>
-
                   <div className="inputField">
                     <label htmlFor="projectDescription3">
                       Enter your 3st project Description
@@ -356,9 +372,7 @@ const NewResumeForm = () => {
                       <ErrorMessage name="techStack3" />
                     </div>
                   </div>
-
                   {/* third project end */}
-
                   {/* education to tech stack start spacial case */}
                   <div className="inputField1">
                     <label htmlFor="education">Education</label>
@@ -491,7 +505,6 @@ const NewResumeForm = () => {
                       <ErrorMessage name="education" />
                     </div>
                   </div>
-
                   <div className="inputField1">
                     <label htmlFor="techStack">Tech Stack</label>
                     <FieldArray className="input1" name="techStack">
@@ -535,19 +548,20 @@ const NewResumeForm = () => {
                       <ErrorMessage name="education" />
                     </div>
                   </div>
-
                   {/* education to tech stack end special case */}
-                  <button
-                    className="button-41"
-                    type="submit"
-                    disabled={props.isSubmitting}
-                  >
-                    Submit
-                  </button>
+                  <div>
+                    <button
+                      className="button-41"
+                      type="submit"
+                      disabled={props.isSubmitting}
+                    >
+                      Submit
+                    </button>
 
-                  <button className="button-42" type="reset">
-                    Reset
-                  </button>
+                    <button className="button-42" type="reset">
+                      Reset
+                    </button>
+                  </div>
                 </div>
               </Form>
             </>
