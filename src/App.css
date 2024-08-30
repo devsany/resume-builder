@@ -1,8 +1,21 @@
 body {
   background-color: white;
 }
-input {
+
+.input {
   width: 250px;
+  height: 25px;
+  border: 4px double #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  outline: none;
+  color: rgb(4, 4, 92);
+}
+.input1 {
+  width: 200px;
   height: 25px;
   border: 4px double #ccc;
   border-radius: 5px;
@@ -26,9 +39,19 @@ label {
   margin-top: -2px;
   color: red;
 }
+.note {
+  /* font-size: 12px; */
+}
 .inputField {
   flex-grow: 1;
   height: 90px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.inputField1 {
+  flex-grow: 1;
+  /* height: 90px; */
   display: flex;
   flex-direction: column;
   margin: 5px;
@@ -48,7 +71,9 @@ label {
   background-color: rgb(19, 10, 73);
 }
 .display {
-  /* width: 80%; */
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
 }
 .navlink {
   margin-left: 5px;
@@ -169,7 +194,7 @@ CSS */
   box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
   color: #ffffff;
   cursor: pointer;
-  display: inline-block;
+  /* display: inline-block; */
   font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial,
     sans-serif;
   height: 44px;
@@ -178,7 +203,7 @@ CSS */
   overflow: hidden;
   padding: 0 20px;
   pointer-events: auto;
-  position: relative;
+  /* position: relative; */
   text-align: center;
   touch-action: manipulation;
   user-select: none;
@@ -211,7 +236,7 @@ CSS */
   overflow: hidden;
   padding: 0 20px;
   pointer-events: auto;
-  position: relative;
+  /* position: relative; */
   text-align: center;
   touch-action: manipulation;
   user-select: none;
@@ -237,4 +262,43 @@ CSS */
   padding: 5px;
   border: none;
   cursor: pointer;
+}
+/* <!-- HTML !-->
+<button class="button-70" role="button">Button 70</button> */
+
+/* CSS */
+.plus {
+  background-image: linear-gradient(#0dccea, #0d70ea);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.minus {
+  background-image: linear-gradient(#ff7e31, #e62c03);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.9em;
+  margin: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
