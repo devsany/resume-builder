@@ -14,10 +14,10 @@ const Nav = () => {
         <NavLink to="/Single_new_resume">View Resume</NavLink>
       </div>
       <div className="navlink">
-        <NavLink to="/email_application_field">Application</NavLink>
+        <NavLink to="/explore_more_resume_builder">Explore More</NavLink>
       </div>
       <div className="navlink">
-        <NavLink to="/explore_more_resume_builder">Explore More</NavLink>
+        <NavLink to="/email_application_field">Application</NavLink>
       </div>
       <div className="navlink">
         <NavLink to="/contact">Contact</NavLink>

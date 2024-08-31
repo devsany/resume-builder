@@ -9,6 +9,9 @@ import Contact from "./component/maincomponent/Contact/Contact";
 import Help from "./component/maincomponent/help/Help";
 import ExploreMore from "./component/maincomponent/exploremore/ExploreMore";
 import Email from "./component/maincomponent/email/Email";
+import ViewOne from "./component/maincomponent/exploremore/View1/ViewOne";
+import ViewTwo from "./component/maincomponent/exploremore/view2/ViewTwo";
+import ViewThree from "./component/maincomponent/exploremore/view3/ViewThree";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -40,6 +43,9 @@ function App() {
               path="/explore_more_resume_builder"
               element={<ExploreMore />}
             />
+            <Route path="view_one" element={<ViewOne />} />
+            <Route path="view_two" element={<ViewTwo />} />
+            <Route path="view_three" element={<ViewThree />} />
           </Routes>
         </div>
       </div>

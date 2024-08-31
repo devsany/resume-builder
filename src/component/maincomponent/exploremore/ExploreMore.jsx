@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const ExploreMore = () => {
   return (
@@ -17,15 +18,34 @@ const ExploreMore = () => {
           display: "flex",
           marginTop: "20px",
           fontWeight: "700",
-          
+
           justifyContent: "center",
         }}
-    
       >
         <div style={{ width: "50rem" }} className="pick_up_line">
           Pick one of many world-class templates and build your resume in
           minutes
         </div>
+      </div>
+      <div className="explore_more_view">
+        <NavLink to="/view_one">
+          <img src="Screenshot 2024-08-31 195824.png" alt="view_one_resume" />
+        </NavLink>
+      </div>
+      <div className="explore_more_view">
+        <NavLink to="/Single_new_resume">
+          <img src="Screenshot 2024-08-31 195936.png " alt="view_one_resume" />
+        </NavLink>
+      </div>
+      <div className="explore_more_view">
+        <NavLink to="/view_two">
+          <img src="view_two.png " alt="view_two_resume" />
+        </NavLink>
+      </div>
+      <div className="explore_more_view">
+        <NavLink to="/view_three">
+          <img src="view_three.png " alt="view_three_resume" />
+        </NavLink>
       </div>
     </div>
   );
