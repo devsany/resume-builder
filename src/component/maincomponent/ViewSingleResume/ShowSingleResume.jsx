@@ -1,11 +1,138 @@
-import React from "react";
+import React, { useMemo, useRef, useState } from "react";
+import {
+  PrintContextConsumer,
+  ReactToPrint,
+  useReactToPrint,
+} from "react-to-print";
+import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
 
-const ShowSingleResume = () => {  
+const ShowSingleResume = () => {
+  const [data, setData] = useState({});
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "Print This Document",
+    onBeforePrint: () => console.log("before printing..."),
+    onAfterPrint: () => console.log("after printing..."),
+    removeAfterPrint: true,
+  });
+
+  const storedSkills = JSON.parse(localStorage.getItem("user_resume_data"));
+
+  console.log(storedSkills);
+  // setData(storedSkills);
   return (
     <div>
-      <div className="single_main">
-        <div className="single_main_for_padding"></div>
-      </div>
+      <button className="button-41" onClick={handlePrint}>
+        Print
+      </button>
+      <Document>
+        <Page fixed>
+        <div className="mainSinglePage">
+        <div ref={componentRef}>
+            <div className="main_resume_page">
+              <div className="main_resume_page_inner">
+                <div className="main-resume_page_content">
+                  <div className="name">{storedSkills.name}</div>
+                  <div className="applyfor">({storedSkills.applyFor})</div>
+                  <div className="contact">
+                    {storedSkills.email} | {storedSkills.phone[0]} |{" "}
+                    {storedSkills.phone[1]}
+                  </div>
+                  <div className="social_media_link" style={{ color: "blue" }}>
+                    <a href={storedSkills.socialMedia}>Facebook</a> |{" "}
+                    <a href={storedSkills.socialMedia1}>Linkedin</a> |{" "}
+                    <a href={storedSkills.socialMedia3}>Github</a> |{" "}
+                    <a href={storedSkills.socialMedia4}>Instagram</a>
+                  </div>
+                  <div className="points">EXPERIENCE</div>
+                  <div className="exp">
+                    <div className="projectName">
+                      {storedSkills.projectName1}
+                    </div>
+                    <div className="projectDescription1">
+                      <div className="projectDescription">
+                        {storedSkills.projectDescription1}
+                      </div>
+                      <div>
+                        <b>Tech-stack: </b>
+                        {storedSkills.techStack1}
+                      </div>
+                    </div>
+                    <div className="projectName">
+                      {storedSkills.projectName2}
+                    </div>
+                    <div className="projectDescription1">
+                      <div className="projectDescription">
+                        {storedSkills.projectDescription2}
+                      </div>
+                      <div>
+                        {" "}
+                        <b>Tech-stack: </b>
+                        {storedSkills.techStack2}
+                      </div>
+                    </div>
+                    <div className="projectName">
+                      {storedSkills.projectName3}
+                    </div>
+                    <div className="projectDescription1">
+                      <div className="projectDescription">
+                        {storedSkills.projectDescription3}
+                      </div>
+                      <div>
+                        {" "}
+                        <b>Tech-stack: </b>
+                        {storedSkills.techStack3}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="points">EDUCATION</div>
+                  <div className="education">
+                    <div>
+                      <span className="span_education">Education</span>
+                      <div>
+                        {storedSkills.education.map((item) => (
+                          <div>{item}</div>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <span className="span_education">Pass-out Year</span>
+                      <div>
+                        {storedSkills.passout.map((item) => (
+                          <div>{item}</div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="points">Hobbies</div>
+
+                  <div>
+                    {storedSkills.hobbie.map((item) => (
+                      <span className="hobbies">{item}, </span>
+                    ))}
+                  </div>
+
+                  <div className="points">Tack-stack</div>
+
+                  <div>
+                    {storedSkills.techStack.map((item) => (
+                      <span className="hobbies">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <Text
+            render={({ pageNumber, totalPages }) =>
+              `${pageNumber} / ${totalPages}`
+            }
+            fixed
+          />
+        </Page>
+      </Document>
     </div>
   );
 };

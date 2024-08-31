@@ -16,7 +16,6 @@ body {
 }
 a {
   text-decoration: none;
-  color: white;
 }
 .input1 {
   width: 200px;
@@ -307,6 +306,71 @@ CSS */
   touch-action: manipulation;
 }
 .single_main {
-  width: 100px;
-  background-color: #af4848;
+  background-color: #ddd;
+  width: 500px;
+  height: 3508px;
+}
+
+/* single page Css Setup */
+.main_resume_page {
+  margin: 10px;
+  padding: 10px;
+}
+.mainSinglePage {
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+.name {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+.applyfor {
+  text-align: center;
+  font-size: 18px;
+}
+.contact {
+  text-align: center;
+  letter-spacing: 1px;
+}
+.social_media_link {
+  text-align: center;
+  letter-spacing: 1px;
+}
+.points {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.exp {
+  margin-left: 40px;
+}
+.projectName {
+  margin-top: 10px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+}
+.projectDescription1 {
+  margin-left: 40px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.projectDescription {
+  text-align: justify;
+  margin-left: 20px;
+}
+.education {
+  display: flex;
+
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.span_education {
+  text-align: center;
+  font-weight: 700;
+}
+.hobbies {
+  margin-left: 20px;
 }

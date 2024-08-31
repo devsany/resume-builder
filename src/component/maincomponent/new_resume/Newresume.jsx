@@ -7,6 +7,7 @@ const Newresume = () => {
     <div>
       <Title />
       <NewResumeForm />
+       
     </div>
   );
 };
