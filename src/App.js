@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Newresume from "./component/maincomponent/new_resume/Newresume";
 import Home from "./component/maincomponent/Home/Home";
 import Nav from "./component/smallcomponent/Navbar";
 import { useState } from "react";
 import ViewSingleResume from "./component/maincomponent/ViewSingleResume/ViewSingleResume";
+import Contact from "./component/maincomponent/Contact/Contact";
+import Help from "./component/maincomponent/help/Help";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -29,6 +30,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/new_resume" element={<Newresume />} />
             <Route path="/Single_new_resume" element={<ViewSingleResume />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/help" element={<Help />} />
+
           </Routes>
         </div>
       </div>

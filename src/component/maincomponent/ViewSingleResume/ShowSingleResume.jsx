@@ -1,13 +1,10 @@
-import React, { useMemo, useRef, useState } from "react";
-import {
-  PrintContextConsumer,
-  ReactToPrint,
-  useReactToPrint,
-} from "react-to-print";
-import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { useReactToPrint } from "react-to-print";
 
 const ShowSingleResume = () => {
-  const [data, setData] = useState({});
+  const nav = useNavigate();
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -20,14 +17,18 @@ const ShowSingleResume = () => {
   const storedSkills = JSON.parse(localStorage.getItem("user_resume_data"));
 
   console.log(storedSkills);
+  const handleFillForm = () => {
+    nav("/new_resume");
+  };
   // setData(storedSkills);
   return (
-    <div>
-      <button className="button-41" onClick={handlePrint}>
-        Print
-      </button>
-      <Document>
-        <Page fixed>
+    <>
+      {storedSkills && storedSkills ? (
+        <div>
+          <button className="button-41" onClick={handlePrint}>
+            Print
+          </button>
+
           <div className="mainSinglePage">
             <div ref={componentRef}>
               <div className="main_resume_page">
@@ -128,15 +129,17 @@ const ShowSingleResume = () => {
               </div>
             </div>
           </div>
-          <Text
-            render={({ pageNumber, totalPages }) =>
-              `${pageNumber} / ${totalPages}`
-            }
-            fixed
-          />
-        </Page>
-      </Document>
-    </div>
+        </div>
+      ) : (
+        <div>
+          <h2> Plz fill the resume form</h2>
+          <button className="button-41" onClick={handleFillForm}>
+            {" "}
+            Fill Form
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

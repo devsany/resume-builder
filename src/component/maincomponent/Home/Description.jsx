@@ -1,8 +1,7 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Description = () => {
-  const navigator = useNavigate();
   return (
     <div>
       <h2>The Best Online Resume Builder</h2>
