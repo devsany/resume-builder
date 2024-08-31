@@ -103,6 +103,26 @@ const Help = () => {
               , Feal Free to fill the contact form. I will look forword to reply
               to your message 🙂.
             </li>
+            <li>
+              For more Resume Template Navigate to{" "}
+              <span
+                style={{
+                  backgroundColor: "#eee",
+                  paddingLeft: "5px",
+                  paddingRight: "5px",
+                  paddingBottom: "2px",
+                  margin: "2px",
+                  borderRadius: "5px",
+                }}
+              >
+                <NavLink to="/explore_more_resume_builder">
+                  {" "}
+                  🚀 Explore More
+                </NavLink>
+              </span>{" "}
+              Route. In this route you may find more interective templates for
+              your resume.{" "}
+            </li>
           </ol>
         </div>
       </div>
