@@ -572,4 +572,4 @@ const NewResumeForm = () => {
   );
 };
 
-export default NewResumeForm;
+export default React.memo(NewResumeForm);

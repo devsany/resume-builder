@@ -8,8 +8,7 @@ const Containt = (props) => {
         <div className="containt_description">{props.description}</div>
       </div>
     </div>
-      
   );
 };
 
-export default Containt;
+export default React.memo(Containt);
