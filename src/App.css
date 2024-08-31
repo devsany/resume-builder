@@ -387,3 +387,11 @@ CSS */
   font-size: 17px;
   margin-top: 7.5px;
 }
+.pick_up_line {
+  margin-top: 50px;
+  font-size: 40px;
+  background: -webkit-linear-gradient(yellow, rgb(255, 33, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44); */
+}

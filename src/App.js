@@ -7,6 +7,8 @@ import { useState } from "react";
 import ViewSingleResume from "./component/maincomponent/ViewSingleResume/ViewSingleResume";
 import Contact from "./component/maincomponent/Contact/Contact";
 import Help from "./component/maincomponent/help/Help";
+import ExploreMore from "./component/maincomponent/exploremore/ExploreMore";
+import Email from "./component/maincomponent/email/Email";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -30,9 +32,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/new_resume" element={<Newresume />} />
             <Route path="/Single_new_resume" element={<ViewSingleResume />} />
+            <Route path="/email_application_field" element={<Email />} />
+
             <Route path="/contact" element={<Contact />} />
             <Route path="/help" element={<Help />} />
-
+            <Route
+              path="/explore_more_resume_builder"
+              element={<ExploreMore />}
+            />
           </Routes>
         </div>
       </div>
