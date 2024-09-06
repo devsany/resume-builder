@@ -187,7 +187,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="socialMedia"
-                      placeholder="Enter social media link"
+                      placeholder="Enter social media link 1"
                       name="socialMedia"
                     />
                     <div className="error">
@@ -200,7 +200,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="socialMedia1"
-                      placeholder="Enter social media link"
+                      placeholder="Enter social media link 2"
                       name="socialMedia1"
                     />
                     <div className="error">
@@ -236,7 +236,7 @@ const NewResumeForm = () => {
 
                   <div className="inputField">
                     <label htmlFor="projectName1">
-                      Enter your project Name
+                      Enter your project Name 1
                     </label>
                     <FastField
                       className="input"
@@ -272,7 +272,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="techStack1"
-                      placeholder="Project Tech stack"
+                      placeholder="Project Tech stack 1"
                       name="techStack1"
                     />
                     <div className="error">
@@ -282,7 +282,7 @@ const NewResumeForm = () => {
                   {/* second project  */}
                   <div className="inputField">
                     <label htmlFor="projectName2">
-                      Enter your project Name
+                      Enter your project Name 2
                     </label>
                     <FastField
                       className="input"
@@ -303,7 +303,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="projectDescription2"
-                      placeholder="Project Description One"
+                      placeholder="Project Description Two"
                       name="projectDescription2"
                     />
                     <div className="error">
@@ -318,7 +318,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="techStack2"
-                      placeholder="Project Tech stack"
+                      placeholder="Project Tech stack 2"
                       name="techStack2"
                     />
                     <div className="error">
@@ -329,7 +329,7 @@ const NewResumeForm = () => {
                   {/* third project start */}
                   <div className="inputField">
                     <label htmlFor="projectName3">
-                      Enter your project Name
+                      Enter your project Name 3
                     </label>
                     <FastField
                       className="input"
@@ -350,7 +350,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="projectDescription3"
-                      placeholder="Project Description One"
+                      placeholder="Project Description Three"
                       name="projectDescription3"
                     />
                     <div className="error">
@@ -365,7 +365,7 @@ const NewResumeForm = () => {
                       className="input"
                       type="text"
                       id="techStack3"
-                      placeholder="Project Tech stack"
+                      placeholder="Project Tech stack 3"
                       name="techStack3"
                     />
                     <div className="error">
